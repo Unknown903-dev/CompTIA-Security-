@@ -1,0 +1,94 @@
+
+CIA Triad
+
+        Confidentiality
+                - Ensures that unauthorized users cannot access sensitive data or information from an application or system
+                - Often achieved using techniques like cryptography to ensure only authorized users can view the data
+                - Encompasses maintaining access restrictions on information, including data in transit, at rest, and in use
+                - Essential for protecting personal privacy and confidential information, such as passwords, cryptographic keys, PII (Personally Identifiable Information), PHI (Personal Health Information), IP (Intellectual Property), and other sensitive data
+                        Examples of confidentiality measures include:
+                                - Utilizing IPsec Virtual Private Networks (VPNs)
+                                - Employing mutual TLS (Transport Layer Security) between a browser and server
+                                - Storing sensitive data in secure partitions or enclaves on mobile devices
+                                - Applying AES encryption to data at rest, such as files, databases, or storage objects
+
+        Integrity
+                - Focuses on preventing unauthorized alteration or destruction of information
+                - Ensures that data remains accurate and unmodified without proper authorization
+                - Integrity reflects:
+                        - The operating system’s logical reliability
+                        - The software and hardware’s consistency in maintaining protection mechanisms
+                        - The correctness of data structures and the integrity of stored data
+                        Examples of integrity measures:
+                                - Using checksums when transferring files between volumes
+                                - Performing frame check sequences in Ethernet frames
+                                - Applying hashed message authentication codes (HMACs) to advertisements between routers
+                                - Implementing mandatory access control techniques like Biba or Clark-Wilson
+
+        Availability
+                - Ensures that information and systems are accessible and usable by authorized individuals when needed
+                - A system property ensuring reliable access to data and services
+                - Aims for “high availability,” ensuring services remain operational during both planned and unplanned outages
+                        Examples of availability measures:
+                                - Deploying protections against spoofing, flooding, DDOS, and poisoning to ensure data can be accessed
+                                - Ensuring critical security tools like firewalls, intrusion detection/prevention systems (IDS/IPS), and antivirus are always operational, often within failover groups
+                                - Selecting optimal disaster recovery solutions tailored to the organization’s needs
+
+        Non-Repudiation
+                - Prevents a subject from denying their involvement in a digital transaction, such as an email or contract
+                - Guarantees that once an agreement is made, the subject cannot refute responsibility
+                - For example, a pen signature on a contract ensures non-repudiation
+                - In IT, this is often achieved using public/private key pairs and digitally signed certificates for both sending and receiving parties
+                - Without non-repudiation, a sender may later claim they did not perform a specific action (like an online banking transaction), but their private key signing the cryptographic hash ensures accountability
+
+        Triple (AAA): Authentication, Authorization, and Accounting
+                - Authentication: Verifying the identity of an entity (user, application, or system)
+                - Authorization: Determining what actions the authenticated entity can perform or which resources they can access
+                - Accounting: Tracking the entity’s activities, such as when they started, ended, and the duration of their actions
+
+                In AAA services, distinguishing between character mode and packet mode is important:
+                - Character mode: Used when sending commands or keystrokes directly to a network access device (e.g., a router or firewall) for configuration purposes
+                - Packet mode: Used when the network device acts as an authentication proxy, authenticating on behalf of other network services or systems (like web servers, FTP servers, etc)
+
+                AAA in action:
+                - Character Mode: Admin access to a network device for configuration
+                - Packet Mode: Accessing resources in a public zone (e.g., a web server) through a network device performing packet-level AAA
+
+                - Authentication must occur even in open or anonymous access techniques, such as 802.11 wireless or anonymous FTP
+                - Authorization: Although optional for authenticated entities, it’s often critical from a policy standpoint to restrict access
+                - Accounting: Mainly used for monitoring activities and generating reports, or for billing and chargeback purposes
+                - RADIUS and DIAMETER are popular AAA protocols, with DIAMETER being the next-generation version
+
+        Authenticating People
+                - Authentication verifies that the individual is indeed who they claim to be
+                - The most common authentication factors are something you know (like a password), something you have (like a smart card), or something you are (like biometric traits)
+                        Examples of authentication methods:
+                                - Username and password or passphrase
+                                - Personal Identification Number (PIN)
+                                - Smart card or USB token
+                                - X.509 v3 digital certificate
+                                - Biometric factors such as fingerprints, retina scans, or face recognition
+
+        Authenticating Devices and Systems
+                - Devices, referred to as “non-person entities” (NPEs), can also be authenticated to ensure they are authorized to connect to networks or systems
+                - Common device authentication methods:
+                        - Shared secret keys
+                        - X.509 v3 certificates stored in software applications
+                        - Cryptographic keys in hardware like a TPM or HSM
+                        - Protected access files (PACs) in wireless infrastructures
+                - The increasing role of endpoint security, especially in the Internet of Things (IoT) and machine-to-machine (M2M) communications, highlights the need for device authentication
+
+        Authorization Models
+                - DAC (Discretionary Access Control): Access decisions are made by resource owners. While flexible, DAC can lead to inconsistent access controls without proper automation and visibility.
+                - RBAC (Role-Based Access Control): Access is granted based on predefined roles associated with a user’s job title or position.
+                        - Roles determine permissions, and users inherit those permissions. Common in systems like hospitals or databases
+                - MAC (Mandatory Access Control): A rigid model where access is determined by the system based on security labels and clearance levels. Common in high-security environments
+                - ABAC (Attribute-Based Access Control): Access decisions are based on attributes of the user, resource, and environment
+                - ABDAC (Attribute-Based Dynamic Access Control): Combines ABAC with dynamic factors such as risk assessment, contextual information, or user behavior analytics
+                - Rule-Based Access Control: Rules define conditions for granting access based on factors like IP address, protocol, or service
+
+        Security Control Categories
+                - Technical Controls: Automated mechanisms that ensure confidentiality, integrity, and availability protections, including encryption, SIEM systems, and IAM tools
+                - Managerial Controls: Policies and procedures governing security, such as acceptable use policies, training programs, and risk assessments
+                - Operational Controls: Day-to-day activities that maintain security, such as patch management, incident response, and system monitoring
+                - Physical Controls: Protect physical access to systems, facilities, and people. Includes barriers, surveillance, locks, and environmental controls
