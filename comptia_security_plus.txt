@@ -33,7 +33,11 @@ CIA Triad
                                 - Deploying protections against spoofing, flooding, DDOS, and poisoning to ensure data can be accessed
                                 - Ensuring critical security tools like firewalls, intrusion detection/prevention systems (IDS/IPS), and antivirus are always operational, often within failover groups
                                 - Selecting optimal disaster recovery solutions tailored to the organization’s needs
-
+in other words 
+	data must be kept confidential 
+	data must be accurate (data integrity)
+	data must be available when requested
+-----------------------
         Non-Repudiation
                 - Prevents a subject from denying their involvement in a digital transaction, such as an email or contract
                 - Guarantees that once an agreement is made, the subject cannot refute responsibility
@@ -92,3 +96,40 @@ CIA Triad
                 - Managerial Controls: Policies and procedures governing security, such as acceptable use policies, training programs, and risk assessments
                 - Operational Controls: Day-to-day activities that maintain security, such as patch management, incident response, and system monitoring
                 - Physical Controls: Protect physical access to systems, facilities, and people. Includes barriers, surveillance, locks, and environmental controls
+make sure to memorize the categories
+
+
+control types: preventative, deterrent, the detective, corrective, compensating, and directive
+	
+	- Preventative attacks stop an attacker from successfully conducting an exploit or advanced persistent threat
+ 		for ex: fences, gates, and locking mechanisms. And although a fence or a gate or even a lock can be overcome by brute force, we still consider them preventative
+
+	- Deterrent controls are designed to discourage an attacker from starting or continuing an attack
+		for Ex: warning signs, bollards, window stickers, or the visible presence of security guard
+	
+	- Detective controls are used to identify when an attack is occurring and to observe the stages of the attacker’s kill chain that is, the sequence of actions an attacker takes against a system
+		
+	- An intrusion detection system can be technical, such as an IDS or IPS sensor, or physical, such as a surveillance camera or other monitoring system
+
+	- Corrective controls are used to restore a system to its state prior to a negative event
+	 This restoration point is known as the recovery point or recovery point objective (RPO), and these controls are intended to fix or correct an identified issue
+		 For ex: after a ransomware attack, you can reimage the machine and recover the data from a backup
+	
+	- A compensating control aids control that are already in place, or it's to provide a temporary stopgap solution
+		for ex: it could be a next-generation endpoint protection system such as Palo Alto Cortex XDR, or it could be some stopgap measure that you put in place 
+		until you have the full budget for a comprehensive solution
+	
+	- A directive control is basically mandatory policies and regulations that are in place to maintain consistency and compliance
+		For ex: a directive that states how an end user can use their provisioned pad or mobile device, or company car or truck
+
+
+
+
+
+
+
+
+
+
+
+
