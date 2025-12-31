@@ -121,8 +121,140 @@ control types: preventative, deterrent, the detective, corrective, compensating,
 	
 	- A directive control is basically mandatory policies and regulations that are in place to maintain consistency and compliance
 		For ex: a directive that states how an end user can use their provisioned pad or mobile device, or company car or truck
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Gap analysis can be applied to many different contexts, but at its core, it refers to identifying the difference between a current state and a desired future state
+	In this case, the focus is on gap analysis within the field of information security
+
+        - To understand where an organization currently stands and where it needs to be in terms of security maturity, a gap analysis must be conducted
+	 This technique is widely used across security projects, plans, programs, and initiatives and will be applied repeatedly throughout a security professional’s career
+
+        - An information security gap analysis is a comprehensive evaluation that helps an organization measure the difference between its current security posture and established industry requirements, guidance, and best practices, commonly referred to as security guidelines.
+
+        - Performing a security gap analysis provides greater insight into an organization’s existing cybersecurity risks and vulnerabilities
+		-This type of assessment highlights where technical, physical, managerial, and operational controls are missing or insufficient
+	 	 It also involves identifying residual risk and determining whether additional physical or logical safeguards need to be acquired and implemented
+
+        Common examples of security gaps include:
+                - Weak, reused, or shared credentials
+                - Lack of a tested and enforced patch management process
+                - Violations of the principle of least privilege or need-to-know Missing or unenforced acceptable use policies
+                - Poor physical security controls or facility vulnerabilities
+                - Configuration and deployment errors caused by inadequate change or configuration management
+                - Limited visibility into systems and insufficient logging, monitoring, or auditing
+
+zero trust control plane 
+	
+	- Zero Trust (ZT) refers to an evolving cybersecurity model that shifts defenses away from traditional, static, network-based perimeters (such as a membership in a VLAN or a subnets and your IP address) based trust and instead treats users, assets, and resources as the security perimeter
+		- Zero Trust assumes that no implicit trust is granted to any user account or asset based solely on network location, physical presence, or ownership
+		- This approach represents a departure from the traditional “trust but verify” security model
+
+        	- In a Zero Trust architecture, authentication and authorization—covering both subjects (users or systems) and objects (resources) are distinct processes that must be completed before a session to an enterprise resource is established, such as during a TCP/TLS connection
+		- Zero Trust consistently enforces the principle of least privilege across all resource types and locations, both physical and logical
+		- It also emphasizes separation of duties and high levels of visibility through tools such as SIEM and SOAR platforms
+		- Zero Trust is often referred to as Zero Trust Network Access (ZTNA).
+
+        - Zero Trust is adaptive identity, also known as adaptive authentication or risk-based authentication
+		- This method evaluates access requests by correlating user credentials with the risk associated with the requested resource
+			 For example, accessing sensitive data or intellectual property presents a higher risk than accessing general info on an internal human resources intranet
+
+        	- Adaptive identity supports multiple classes of users and participants whose roles and identities may change to accommodate dynamic environments
+		- It enables flexible, scalable identity management that is easier to maintain while remaining agile and adaptable to evolving organizational needs
+
+        - Zero Trust and ZTNA is threat scope reduction and risk avoidance
+		- By limiting access and reducing exposure, Zero Trust minimizes the potential impact of threats while supporting agility in complex environments
+		- This approach addresses the growing number and complexity of communication patterns that are difficult to secure using traditional data or asset centric models
+
+        - The Zero Trust control plane is a critical architectural component and operates separately from the data plane
+		-The control plane contains the Policy Decision Point (PDP), which includes the Policy Engine (PE) and the Policy Administrator (PA).
+
+        	- The Policy Engine evaluates access requests using enterprise-defined, policy-driven access controls and inputs from external sources to determine whether access should be granted, denied, or revoked
+		- The Policy Administrator is responsible for establishing or terminating communication paths between a subject and a resource by issuing commands to Policy Enforcement Points (PEPs)
+		- Communication between the PA and the PEP occurs through the control plane
 
 
+        - In a Zero Trust architecture, the data plane and control plane are logically separated
+	- A subject—such as a user, system, or non-person entity (NPE)—initiates a request to access a resource
+	- At this stage, the subject is considered untrusted
+	- The request is redirected through a Policy Enforcement Point to the Policy Decision Point, where authentication and authorization are evaluated
+
+        Once the subject has been successfully authenticated and authorized, access is granted according to policy, and the subject is permitted to interact with the enterprise resource within the defined authorization boundaries
+
+zero trust data plane 
+	
+	- The Zero Trust data plane is defined by explicit trust zones These trust zones represent clearly segmented environments and may include
+		 data centers, demilitarized zones (DMZs) or other public access zones, the public Internet, cloud computing subnets such as private or VPN-only subnets or VLANs, and even specialized environments such as a honeynet
+
+        - Within a Zero Trust architecture, there are two primary categories of Policy Enforcement Points (PEPs): network-based PEPs and application-based PEPs
+
+        - Network-based PEPs may include 
+		edge routers, core routers, perimeter firewall appliances, software-defined perimeter (SDP) access gateways, Layer 2 and multilayer switches, or authentication proxy servers running on platforms such as Windows Server or Red Hat Enterprise Linux
+
+        - Application-based PEPs 
+		include components such as API gateways that process WebSocket and RESTful API requests, resource groups, network VLANs, source code repositories, and various trusted cloud services that enforce access controls at the application or service layer
+	
+	- The architecture consists of a separate control plane, which contains the Policy Decision Point (PDP), and a data plane, which contains the Policy Enforcement Points (PEPs)
+
+        - Remember that Policy Enforcement Points can operate at either the network level or the application level, and they are responsible for enforcing access decisions made by the control plane
+
+
+Deception technologies begin with the concept of a honeypot
+	- A honeypot is a single decoy system or resource designed to attract potential attackers
+		for Ex include a web server, an FTP server, a Microsoft SharePoint instance, or even a specific file hosted on a server
+	
+		- The purpose of a honeypot is to appear valuable and appealing to threat actors, including those conducting advanced persistent threats, much like honey attracts a bear
+        	- Modern honeypots are commonly deployed as virtual machines running on a Type 1 hypervisor, such as a VMware-based solution
+		- These systems are typically positioned behind customer premises equipment, such as an edge router or firewall appliance, and are strategically placed alongside public-facing or demilitarized zones (DMZs) where externally accessible servers normally reside
+
+        - A honeynet can be defined as a collection or network of honeypots
+		- Honeynets are intentionally configured with vulnerabilities and hosted on decoy servers and services
+		- Their primary objectives are to attract attackers, redirect or slow malicious activity, and observe attack behaviors
+		- Honeynets are also used to test network security by allowing threat actors to execute attack patterns and progress through various kill chain phases
+			- This enables security teams to analyze real-world attacker techniques, tactics, and procedures to strengthen defensive controls
+
+        In a typical honeynet architecture, an edge router connects to the Internet through an internet service provider
+	The router contains multiple interfaces, one connecting to the Internet, another connecting to the production network, and a third connecting to a honeynet gateway
+	The honeynet gateway, which may be a firewall appliance, separates the honeypot network from the production environment
+
+        One interface of the edge router connects to the production network, which may include web servers, file servers, and commonly DNS servers
+	Another interface connects to the honeynet gateway, behind which resides the honeypot network
+	This honeypot network is designed to closely resemble a legitimate environment, but it exists solely for deception and active defense purposes.
+
+        
+Additional deception technologies include honey files, also known as honey tokens
+	- These are decoy files or artifacts placed within an environment to detect malicious insider activity
+	- Privileged insiders represent one of the most significant internal threats to organizations, and honey files are used to identify individuals who have already engaged in unauthorized activities such as data breaches, data loss, or data theft
+
+        - Honey files and honey tokens are not intended to entrap legitimate users
+		- Instead, they are investigative tools used to identify suspects during or after confirmed malicious activity
+		- They are particularly effective at detecting attackers who are already deep within the kill chain, such as during enumeration, privilege escalation, or lateral movement phases
+        	- Common examples of honey tokens include fake access keys, credentials to high-value cloud-based services, or decoy database connection points that trigger alerts when accessed or used
+
+preventative physical security controls 
+	
+	Preventative physical security controls are foundational to an effective security program. Before security professionals can focus on technical or operational countermeasures, they must ensure that assets are housed within a physically secure property, facility, and environment. While detective and deterrent controls play important roles, preventative controls are critical for protecting all categories of assets.
+
+        One of the most common preventative physical controls is the use of perimeter fencing. Most organizations deploy fence barriers to deter or prevent unauthorized entry or exit. Fences may also be installed to protect specific zones or assets, such as junction boxes, generators, dumpsters, or paper shredding and pulping pickup areas. Fence designs vary by location and threat level and may differ in height, materials, and the use of barbed wire. High-security facilities, such as airports, prisons, and military installations, often employ electrified fencing along with visible warning signage.
+
+        Fences are frequently combined with controlled entry and exit gates. These gates may vary in strength, automation, and guarding. In high-security environments, barricade gates and tire shredders are commonly used to enforce one-way traffic or prevent unauthorized vehicle access, such as in airport rental car facilities. In the United States, gate classifications include:
+                Class I: Residential gate operations
+                Class II: Commercial gates, such as those used in parking lots or garages
+                Class III: Industrial or limited-access gates, commonly found in warehouses, factories, and shipping docks
+                Class IV: Restricted-access gates requiring supervisory control, used in environments such as airports, prisons, and military installations
+
+        Bollards are another preventative physical control and consist of strategically placed vertical barriers designed to redirect pedestrian traffic or block vehicle access to restricted areas, such as building entrances or foyers. Bollards may be permanent or temporary and are typically constructed from reinforced concrete or heavy-duty metal. Temporary bollards may include traffic cones or removable barriers. Advanced bollards can be mechanical and may integrate cameras or sensor technologies.
+
+        Access control vestibules, also known as security vestibules or mantraps, are fortified entryways designed to resist forced entry. These areas often include forced-entry-resistant and bullet-resistant glazing, reinforced frames, and high-quality security materials. Mantraps typically consist of two or more interlocking doors that ensure only one door can be opened at a time.
+
+        In a mantrap configuration, only one individual is permitted inside the vestibule at a time, preventing tailgating or piggybacking. Within this controlled space, an individual may be identified and authenticated through credential checks, biometric verification, or additional proofing such as presenting a driver’s license or passport. Mantraps often include surveillance cameras, intercom systems, and may be monitored by security personnel positioned behind bullet-resistant glass. Access is ultimately granted through electronically controlled locking mechanisms.
+
+        Access badges and cards represent a physical authentication factor categorized as “something you have.” These credentials are often used in combination with access control vestibules. Many organizations require visitors to register at a reception or security desk located near the facility entrance. At this point, identification information is logged, temporary access badges may be issued, and photographs may be captured for visitor credentials.
+
+        Organizations should enforce strict policies prohibiting tailgating and piggybacking at all access points, regardless of an individual’s role or status, including employees, contractors, temporary workers, and guests. In the United States military, a Common Access Card (CAC) is used to control access. This card typically includes an expiration date, a federal identifier, organizational affiliation, agency or service designation, color indicators, pay grade or rank, classification or sensitivity level, and an embedded integrated circuit chip.
+
+        Security guards are another key preventative physical control and are often deployed on a 24-hour basis, though coverage may be limited to business or non-business hours depending on budget constraints. Security guards serve multiple control functions, including preventative, deterrent, and detective roles. They can provide immediate response to incidents and may act as first responders during security events. In some environments, robotic sentries are increasingly being used to supplement or replace human guards.
+
+        When deploying security guards, organizations must consider several factors, including whether guards are hired directly, contracted, or freelance. Additional considerations include certification and licensing requirements, whether guards are armed or unarmed, and the impact of these choices on insurance policies, as armed guards may increase premiums. Organizations should also evaluate who conducts background checks and screening, where guards are stationed within the facility, and how ongoing training and oversight are managed.
 
 
 
