@@ -232,29 +232,62 @@ Additional deception technologies include honey files, also known as honey token
 
 preventative physical security controls 
 	
-	Preventative physical security controls are foundational to an effective security program. Before security professionals can focus on technical or operational countermeasures, they must ensure that assets are housed within a physically secure property, facility, and environment. While detective and deterrent controls play important roles, preventative controls are critical for protecting all categories of assets.
+	Preventative physical security controls are foundational to an effective security program
+		- Before security professionals can focus on technical or operational countermeasures, they must ensure that assets are housed within a physically secure property, facility, and environment 
+		- While detective and deterrent controls play important roles, preventative controls are critical for protecting all categories of assets
 
-        One of the most common preventative physical controls is the use of perimeter fencing. Most organizations deploy fence barriers to deter or prevent unauthorized entry or exit. Fences may also be installed to protect specific zones or assets, such as junction boxes, generators, dumpsters, or paper shredding and pulping pickup areas. Fence designs vary by location and threat level and may differ in height, materials, and the use of barbed wire. High-security facilities, such as airports, prisons, and military installations, often employ electrified fencing along with visible warning signage.
+        One of the most common preventative physical controls is the use of perimeter fencing
+		- Most organizations deploy fence barriers to deter or prevent unauthorized entry or exit
+		- Fences may also be installed to protect specific zones or assets, such as junction boxes, generators, dumpsters, or paper shredding and pulping pickup areas
+		- Fence designs vary by location and threat level and may differ in height, materials, and the use of barbed wire
+		- High-security facilities, such as airports, prisons, and military installations, often employ electrified fencing along with visible warning signage
 
-        Fences are frequently combined with controlled entry and exit gates. These gates may vary in strength, automation, and guarding. In high-security environments, barricade gates and tire shredders are commonly used to enforce one-way traffic or prevent unauthorized vehicle access, such as in airport rental car facilities. In the United States, gate classifications include:
-                Class I: Residential gate operations
-                Class II: Commercial gates, such as those used in parking lots or garages
-                Class III: Industrial or limited-access gates, commonly found in warehouses, factories, and shipping docks
-                Class IV: Restricted-access gates requiring supervisory control, used in environments such as airports, prisons, and military installations
+	Gates
+        	- Fences are frequently combined with controlled entry and exit gates. These gates may vary in strength, automation, and guarding
+		- In high-security environments, barricade gates and tire shredders are commonly used to enforce one-way traffic or prevent unauthorized vehicle access, such as in airport rental car facilities. In the United States, gate classifications include:
+                	Class I: Residential gate operations
+                	Class II: Commercial gates, such as those used in parking lots or garages
+                	Class III: Industrial or limited-access gates, commonly found in warehouses, factories, and shipping docks
+                	Class IV: Restricted-access gates requiring supervisory control, used in environments such as airports, prisons, and military installations
+	Bollards
+		- Bollards are another preventative physical control and consist of strategically placed vertical barriers designed to redirect pedestrian traffic or block vehicle access to restricted areas, such as building entrances or foyers
+		- Bollards may be permanent or temporary and are typically constructed from reinforced concrete or heavy-duty metal
+		- Temporary bollards may include traffic cones or removable barriers
+		- Advanced bollards can be mechanical and may integrate cameras or sensor technologies
 
-        Bollards are another preventative physical control and consist of strategically placed vertical barriers designed to redirect pedestrian traffic or block vehicle access to restricted areas, such as building entrances or foyers. Bollards may be permanent or temporary and are typically constructed from reinforced concrete or heavy-duty metal. Temporary bollards may include traffic cones or removable barriers. Advanced bollards can be mechanical and may integrate cameras or sensor technologies.
+        Access control vestibules, 
+		- also known as security vestibules or mantraps, are fortified entryways designed to resist forced entry
+	 	- These areas often include forced-entry-resistant and bullet-resistant glazing, reinforced frames, and high-quality security materials
+		- Mantraps typically consist of two or more interlocking doors that ensure only one door can be opened at a time
+	Mantrap
+        	- In a mantrap configuration, only one individual is permitted inside the vestibule at a time, preventing tailgating or piggybacking
+		- Within this controlled space, an individual may be identified and authenticated through credential checks, biometric verification, or additional proofing such as presenting a driver’s license or passport
+		- Mantraps often include surveillance cameras, intercom systems, and may be monitored by security personnel positioned behind bullet-resistant glass
+	
+	Access Badges and cards
+		- Access is ultimately granted through electronically controlled locking mechanisms
+		- Access badges and cards represent a physical authentication factor categorized as “something you have”
+		- These credentials are often used in combination with access control vestibules
+			- Many organizations require visitors to register at a reception or security desk located near the facility entrance
+			-  At this point, identification information is logged, temporary access badges may be issued, and photographs may be captured for visitor credentials
+		- Organizations should enforce strict policies prohibiting tailgating and piggybacking at all access points, regardless of an individual’s role or status, including employees, contractors, temporary workers, and guests
 
-        Access control vestibules, also known as security vestibules or mantraps, are fortified entryways designed to resist forced entry. These areas often include forced-entry-resistant and bullet-resistant glazing, reinforced frames, and high-quality security materials. Mantraps typically consist of two or more interlocking doors that ensure only one door can be opened at a time.
+	In the United States military, a Common Access Card (CAC) is used to control access
+		This card typically includes an expiration date, a federal identifier, organizational affiliation, agency or service designation, color indicators, pay grade or rank, classification or sensitivity level, and an embedded integrated circuit chip
+	
+	Security guards
+        	- Security guards are another key preventative physical control and are often deployed on a 24-hour basis, though coverage may be limited to business or non-business hours depending on budget constraints
+		- Security guards serve multiple control functions, including preventative, deterrent, and detective roles
+		- They can provide immediate response to incidents and may act as first responders during security events
+		- In some environments, robotic sentries are increasingly being used to supplement or replace human guards
 
-        In a mantrap configuration, only one individual is permitted inside the vestibule at a time, preventing tailgating or piggybacking. Within this controlled space, an individual may be identified and authenticated through credential checks, biometric verification, or additional proofing such as presenting a driver’s license or passport. Mantraps often include surveillance cameras, intercom systems, and may be monitored by security personnel positioned behind bullet-resistant glass. Access is ultimately granted through electronically controlled locking mechanisms.
-
-        Access badges and cards represent a physical authentication factor categorized as “something you have.” These credentials are often used in combination with access control vestibules. Many organizations require visitors to register at a reception or security desk located near the facility entrance. At this point, identification information is logged, temporary access badges may be issued, and photographs may be captured for visitor credentials.
-
-        Organizations should enforce strict policies prohibiting tailgating and piggybacking at all access points, regardless of an individual’s role or status, including employees, contractors, temporary workers, and guests. In the United States military, a Common Access Card (CAC) is used to control access. This card typically includes an expiration date, a federal identifier, organizational affiliation, agency or service designation, color indicators, pay grade or rank, classification or sensitivity level, and an embedded integrated circuit chip.
-
-        Security guards are another key preventative physical control and are often deployed on a 24-hour basis, though coverage may be limited to business or non-business hours depending on budget constraints. Security guards serve multiple control functions, including preventative, deterrent, and detective roles. They can provide immediate response to incidents and may act as first responders during security events. In some environments, robotic sentries are increasingly being used to supplement or replace human guards.
-
-        When deploying security guards, organizations must consider several factors, including whether guards are hired directly, contracted, or freelance. Additional considerations include certification and licensing requirements, whether guards are armed or unarmed, and the impact of these choices on insurance policies, as armed guards may increase premiums. Organizations should also evaluate who conducts background checks and screening, where guards are stationed within the facility, and how ongoing training and oversight are managed.
+        When deploying security guards, organizations must consider several factors, including 
+		- whether guards are hired directly, contracted, or freelance
+		- Additional considerations include certification and licensing requirements
+		- whether guards are armed or unarmed, and the impact of these choices on insurance policies
+		- as armed guards may increase premiums
+		- Organizations should also evaluate who conducts background checks and screening
+		- where guards are stationed within the facility, and how ongoing training and oversight are managed
 
 
 
