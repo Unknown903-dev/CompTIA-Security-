@@ -158,48 +158,48 @@ zero trust control plane
 		- It also emphasizes separation of duties and high levels of visibility through tools such as SIEM and SOAR platforms
 		- Zero Trust is often referred to as Zero Trust Network Access (ZTNA).
 
-        - Zero Trust is adaptive identity, also known as adaptive authentication or risk-based authentication
+	- Zero Trust is adaptive identity, also known as adaptive authentication or risk-based authentication
 		- This method evaluates access requests by correlating user credentials with the risk associated with the requested resource
 			 For example, accessing sensitive data or intellectual property presents a higher risk than accessing general info on an internal human resources intranet
 
-        	- Adaptive identity supports multiple classes of users and participants whose roles and identities may change to accommodate dynamic environments
+		- Adaptive identity supports multiple classes of users and participants whose roles and identities may change to accommodate dynamic environments
 		- It enables flexible, scalable identity management that is easier to maintain while remaining agile and adaptable to evolving organizational needs
 
-        - Zero Trust and ZTNA is threat scope reduction and risk avoidance
+	- Zero Trust and ZTNA is threat scope reduction and risk avoidance
 		- By limiting access and reducing exposure, Zero Trust minimizes the potential impact of threats while supporting agility in complex environments
 		- This approach addresses the growing number and complexity of communication patterns that are difficult to secure using traditional data or asset centric models
 
-        - The Zero Trust control plane is a critical architectural component and operates separately from the data plane
+	- The Zero Trust control plane is a critical architectural component and operates separately from the data plane
 		-The control plane contains the Policy Decision Point (PDP), which includes the Policy Engine (PE) and the Policy Administrator (PA).
 
-        	- The Policy Engine evaluates access requests using enterprise-defined, policy-driven access controls and inputs from external sources to determine whether access should be granted, denied, or revoked
+		- The Policy Engine evaluates access requests using enterprise-defined, policy-driven access controls and inputs from external sources to determine whether access should be granted, denied, or revoked
 		- The Policy Administrator is responsible for establishing or terminating communication paths between a subject and a resource by issuing commands to Policy Enforcement Points (PEPs)
 		- Communication between the PA and the PEP occurs through the control plane
 
 
-        - In a Zero Trust architecture, the data plane and control plane are logically separated
+	- In a Zero Trust architecture, the data plane and control plane are logically separated
 	- A subject—such as a user, system, or non-person entity (NPE)—initiates a request to access a resource
 	- At this stage, the subject is considered untrusted
 	- The request is redirected through a Policy Enforcement Point to the Policy Decision Point, where authentication and authorization are evaluated
 
-        Once the subject has been successfully authenticated and authorized, access is granted according to policy, and the subject is permitted to interact with the enterprise resource within the defined authorization boundaries
+	Once the subject has been successfully authenticated and authorized, access is granted according to policy, and the subject is permitted to interact with the enterprise resource within the defined authorization boundaries
 
 zero trust data plane 
 	
 	- The Zero Trust data plane is defined by explicit trust zones These trust zones represent clearly segmented environments and may include
-		 data centers, demilitarized zones (DMZs) or other public access zones, the public Internet, cloud computing subnets such as private or VPN-only subnets or VLANs, and even specialized environments such as a honeynet
+		data centers, demilitarized zones (DMZs) or other public access zones, the public Internet, cloud computing subnets such as private or VPN-only subnets or VLANs, and even specialized environments such as a honeynet
 
-        - Within a Zero Trust architecture, there are two primary categories of Policy Enforcement Points (PEPs): network-based PEPs and application-based PEPs
+	- Within a Zero Trust architecture, there are two primary categories of Policy Enforcement Points (PEPs): network-based PEPs and application-based PEPs
 
-        - Network-based PEPs may include 
+	- Network-based PEPs may include 
 		edge routers, core routers, perimeter firewall appliances, software-defined perimeter (SDP) access gateways, Layer 2 and multilayer switches, or authentication proxy servers running on platforms such as Windows Server or Red Hat Enterprise Linux
 
-        - Application-based PEPs 
+	- Application-based PEPs 
 		include components such as API gateways that process WebSocket and RESTful API requests, resource groups, network VLANs, source code repositories, and various trusted cloud services that enforce access controls at the application or service layer
 	
 	- The architecture consists of a separate control plane, which contains the Policy Decision Point (PDP), and a data plane, which contains the Policy Enforcement Points (PEPs)
 
-        - Remember that Policy Enforcement Points can operate at either the network level or the application level, and they are responsible for enforcing access decisions made by the control plane
+	- Remember that Policy Enforcement Points can operate at either the network level or the application level, and they are responsible for enforcing access decisions made by the control plane
 
 
 Deception technologies begin with the concept of a honeypot
@@ -216,11 +216,11 @@ Deception technologies begin with the concept of a honeypot
 		- Honeynets are also used to test network security by allowing threat actors to execute attack patterns and progress through various kill chain phases
 			- This enables security teams to analyze real-world attacker techniques, tactics, and procedures to strengthen defensive controls
 
-        In a typical honeynet architecture, an edge router connects to the Internet through an internet service provider
+	In a typical honeynet architecture, an edge router connects to the Internet through an internet service provider
 	The router contains multiple interfaces, one connecting to the Internet, another connecting to the production network, and a third connecting to a honeynet gateway
 	The honeynet gateway, which may be a firewall appliance, separates the honeypot network from the production environment
 
-        One interface of the edge router connects to the production network, which may include web servers, file servers, and commonly DNS servers
+	One interface of the edge router connects to the production network, which may include web servers, file servers, and commonly DNS servers
 	Another interface connects to the honeynet gateway, behind which resides the honeypot network
 	This honeypot network is designed to closely resemble a legitimate environment, but it exists solely for deception and active defense purposes.
 
@@ -247,7 +247,7 @@ preventative physical security controls
 		- High-security facilities, such as airports, prisons, and military installations, often employ electrified fencing along with visible warning signage
 
 	Gates
-        	- Fences are frequently combined with controlled entry and exit gates. These gates may vary in strength, automation, and guarding
+		- Fences are frequently combined with controlled entry and exit gates. These gates may vary in strength, automation, and guarding
 		- In high-security environments, barricade gates and tire shredders are commonly used to enforce one-way traffic or prevent unauthorized vehicle access, such as in airport rental car facilities. In the United States, gate classifications include:
                 	Class I: Residential gate operations
                 	Class II: Commercial gates, such as those used in parking lots or garages
@@ -264,7 +264,7 @@ preventative physical security controls
 	 	- These areas often include forced-entry-resistant and bullet-resistant glazing, reinforced frames, and high-quality security materials
 		- Mantraps typically consist of two or more interlocking doors that ensure only one door can be opened at a time
 	Mantrap
-        	- In a mantrap configuration, only one individual is permitted inside the vestibule at a time, preventing tailgating or piggybacking
+		- In a mantrap configuration, only one individual is permitted inside the vestibule at a time, preventing tailgating or piggybacking
 		- Within this controlled space, an individual may be identified and authenticated through credential checks, biometric verification, or additional proofing such as presenting a driver’s license or passport
 		- Mantraps often include surveillance cameras, intercom systems, and may be monitored by security personnel positioned behind bullet-resistant glass
 	
