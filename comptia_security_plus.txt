@@ -153,7 +153,7 @@ zero trust control plane
 		- Zero Trust assumes that no implicit trust is granted to any user account or asset based solely on network location, physical presence, or ownership
 		- This approach represents a departure from the traditional “trust but verify” security model
 
-        	- In a Zero Trust architecture, authentication and authorization—covering both subjects (users or systems) and objects (resources) are distinct processes that must be completed before a session to an enterprise resource is established, such as during a TCP/TLS connection
+		- In a Zero Trust architecture, authentication and authorization—covering both subjects (users or systems) and objects (resources) are distinct processes that must be completed before a session to an enterprise resource is established, such as during a TCP/TLS connection
 		- Zero Trust consistently enforces the principle of least privilege across all resource types and locations, both physical and logical
 		- It also emphasizes separation of duties and high levels of visibility through tools such as SIEM and SOAR platforms
 		- Zero Trust is often referred to as Zero Trust Network Access (ZTNA).
