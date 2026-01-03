@@ -1,3 +1,6 @@
+-------
+PART 1
+-------
 
 CIA Triad
 
@@ -122,7 +125,8 @@ control types: preventative, deterrent, the detective, corrective, compensating,
 	- A directive control is basically mandatory policies and regulations that are in place to maintain consistency and compliance
 		For ex: a directive that states how an end user can use their provisioned pad or mobile device, or company car or truck
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
+Part 2
+--------------------------------------------------------------------------------------------------------------------------------------------
 Gap analysis can be applied to many different contexts, but at its core, it refers to identifying the difference between a current state and a desired future state
 	In this case, the focus is on gap analysis within the field of information security
 
@@ -289,12 +293,111 @@ preventative physical security controls
 		- Organizations should also evaluate who conducts background checks and screening
 		- where guards are stationed within the facility, and how ongoing training and oversight are managed
 
+Detective Physical security Controls
+	
+	video surveillance
+		- Cameras and surveillance systems are used to observe and record activity around a facility’s perimeter to detect intruders or suspicious behavior
+		- While primarily considered detective controls, their visible presence can also serve as a deterrent
+		- Surveillance systems allow incidents to be documented, and alerts should be generated if a camera is tampered with or disabled
+	
+	video surveillance consideration
+		- These systems typically consist of indoor and outdoor cameras or closed-circuit television (CCTV) setups
+		- CCTV feeds may be monitored internally by a security operations center (SOC) or externally by a third-party provider
+		- Recorded footage must be securely stored and transferred to a protected location to prevent tampering or loss
+		- In some cases, organizations employ industrial camouflage, concealing cameras within landscaping, statues, or artificial trees to avoid detection
+	lighting
+		- Video surveillance should be complemented by appropriate lighting solutions
+		- Although many cameras support low-light or night-vision capabilities, both lighting and cameras can suffer from blind spots if not properly designed
+		- Effective lighting improves the performance of cameras, guards, and sensors and should be implemented throughout the perimeter as part of a defense-in-depth strategy
+		- Common lighting technologies include mercury vapor (often used in stadiums), sodium vapor, quartz, and modern LED systems
+	security lighting
+		- Continuous lighting is the most common form of outdoor security lighting and provides consistent illumination
+			- Barrier or glare lighting, originally developed for prisons and other high-security facilities, remains widely used
+		- Standby lighting serves as a backup or enhancement and may activate automatically or manually when primary lighting fails or additional illumination is required
+		- Movable lighting consists of portable floodlights or searchlights that can be repositioned as needed, often used at construction sites or temporary locations
+		- Emergency lighting is activated during power outages or emergencies and is typically powered by batteries or generators
+	types of sensors
+		- Beyond cameras, a variety of sensors are used to detect environmental or physical changes
+		- Photoelectric sensors detect interruptions in a light beam, while passive infrared sensors identify changes in infrared energy, either through line-of-sight or reflected heat
+		- Vibration sensors detect movement, such as footsteps in sensitive environments like museums
+		- Acoustic sensors monitor changes in sound patterns, and microwave sensors detect variations in high-frequency radio waves
+		- Alarm systems commonly used in homes and small businesses often rely on electromechanical mechanisms, such as door or window circuits that trigger when opened
+		- These may be combined with photoelectric sensors
+		- Electrostatic sensors detect changes in electrical fields, while environmental sensors monitor conditions such as temperature and moisture, which are critical in server rooms and data centers
+	sensors trigger alarms
+		- When sensors are activated, they trigger alarms that can take many forms
+		- Alerts may appear as visual indicators on control panels, audible alarms such as bells or sirens, or digital notifications including text messages and emails
+		- In some cases, alarms are silent and directly notify a security company or local law enforcement
+		- Sensors may also initiate automated phone or cellular calls to software systems or live operators for immediate response
 
+change management business process
 
+	change management 
+		- Change management is a structured and systematic process used to manage transitions or modifications to an organization’s objectives, processes, system configurations, or technologies
+		- The goal of change management is to provide a controlled framework for planning, approving, implementing, and tracking changes, while also helping personnel adapt to those changes
+		- This discipline is often referred to as change control
+		- In practice, configuration management typically precedes change management by establishing a baseline environment before standard, normal, or emergency changes are introduced.
+	
+	change management lifecycle
+		- The change management lifecycle consists of several distinct phases
+		- The first phase involves submitting a change request, followed by the approval phase
+		- These stages are often iterative, meaning proposals may move back and forth between submission and approval multiple times
+		- Once approved, the change proceeds through documentation and testing, followed by implementation
+		- After completion, an after-action review or post-implementation report is conducted to evaluate outcomes and identify lessons learned
 
+	change control business process
+		- Effective change control relies on well-defined business processes
+		- The approval workflow should be adaptable and allow for iteration throughout the lifecycle
+		- Ownership of both physical and logical assets must be clearly defined, along with custodianship or control responsibilities, which are typically governed by the organization’s access control model
+		- Stakeholder involvement is essential and is commonly structured using the RACI model: responsible, accountable, consulted, and informed
+		- Every change must have at least one party responsible for execution and exactly one party accountable for the outcome
+		- Consulted stakeholders participate in two-way communication and provide input, while informed stakeholders receive updates without direct involvement
 
+		- A change impact analysis evaluates the differences between the current state and the proposed future state
+		- Its purpose is to determine what will change, who will be affected, and what information must be communicated to impacted parties
+		- This process is also known as a gap analysis
 
+		- Conducting a change impact analysis includes identifying and categorizing affected systems, processes, and individuals, assessing the magnitude of the change, and producing a clear and concise description of the modification
+		- These findings feed directly into stakeholder analysis, communication planning, and implementation strategies
+		- A backout, rollback, or fallback plan defines how to restore systems if a change fails
+		- This recovery strategy must be developed before testing and implementation begin
+		- Best practice is to implement smaller, incremental changes rather than multiple high-impact changes simultaneously
+		- Changes are often scheduled during a predefined maintenance window, typically coordinated by a project or program manager
+		- Finally, standard operating procedures (SOPs) provide detailed, step-by-step instructions to ensure tasks are performed consistently and correctly
+		- SOPs that are well-documented, automated, and orchestrated tend to be more reliable and effective over time
 
+Changed management technical implications
+	- From a security practitioner’s perspective, change management carries several important technical implications
+	- Access control is a central consideration, and allow lists and deny lists are commonly integrated into the change control process in alignment with the organization’s access control model, such as discretionary access control
+	- An allow list functions as a permissive control by explicitly authorizing approved subjects to make changes, whereas a deny list serves as a restrictive control by explicitly blocking unauthorized actions
+	- When principles such as least privilege and separation of duties are enforced, access to specific change management functions and environments is intentionally limited
 
+	- Downtime is closely tied to high availability, which is a core component of system resiliency
+	- Availability accounts for both planned downtime (such as maintenance windows) and unplanned downtime, including outages, blackouts, or brownouts
+	- These factors must be carefully evaluated during technical change management activities, particularly when implementing system modifications or conducting migrations	
+	- Additional technical considerations include service and application restart procedures, ensuring that the entire system state remains secure throughout the change process
+	- Security teams must also account for legacy systems, including their dependencies, compatibility constraints, and interoperability challenges, which can complicate change implementation
+
+Documentation and version control
+		
+	- Organizations are required to maintain thorough documentation using a consistent tagging and labeling framework that aligns with a configuration management database (CMDB) or a software-as-a-service (SaaS) platform such as ServiceNow. A configuration management system (CMS) consists of the data repositories, tools, utilities, and operational processes that collectively support configuration management activities
+	- Historically, relational databases have been the primary technology used to support configuration management
+	- However, modern implementations increasingly rely on NoSQL and document-oriented databases to accommodate scalability and flexibility requirements
+	- In some cases, organizations may also leverage cloud-based data services, such as Amazon Redshift, to support analytical and storage needs
+
+Documenting with a CMDB
+	- It is important to recognize that a CMDB is not a traditional data warehouse
+	- Instead, it is a specialized repository designed for configuration tracking and control, often delivered as a SaaS offering
+	- The CMDB is a foundational component of multiple IT management disciplines, including IT service management (ITSM) and IT asset management (ITAM)
+	- By providing accurate, up-to-date configuration data, it enables better alignment between IT services and business objectives and supports critical processes such as change and patch management, incident and problem management, availability management, and release and deployment management
+
+version control
+	- Version control and formal change management processes are essential for both operations and security teams
+	- Version control extends beyond source code and applies to operating system images, application releases, device drivers, license updates, system upgrades and patches, container images and microservices, firmware revisions, trusted platform modules (TPMs), and hardware or software component updates
+	- Proper version tracking ensures integrity, traceability, and accountability throughout the system lifecycle
+
+------------------------------------------------------------------------------------------------------------------------------
+PART 3
+------------
 
 
